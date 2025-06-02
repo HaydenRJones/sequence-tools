@@ -13,3 +13,7 @@ change the tip labels of gene trees so that they are suitable for use in [GRAMPA
 - flyeLogParser.py
 
 Parse the output of several [flye](https://github.com/mikolmogorov/Flye) assembly runs and select single contigs
+
+- resolveMultiContigs.py
+
+Parse the output of flye and flyeLogParser.py, and attempt to pick a single contig for assembilies with multiple. Selection is based on the quality of mapping against some reference
