@@ -58,3 +58,11 @@ def stripSeqs(barcode, clusterDist)
 
 barcodes = []
 clusterDist = 99
+
+for i in range(0,len(barcodes))
+    
+    stripSeqs(barcodes[i], clusterDist)
+
+
+barcodes = []
+clusterDist = 99
