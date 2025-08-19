@@ -17,3 +17,16 @@ Parse the output of several [flye](https://github.com/mikolmogorov/Flye) assembl
 - resolveMultiContigs.py
 
 Parse the output of flye and flyeLogParser.py, and attempt to pick a single contig for assembilies with multiple. Selection is based on the quality of mapping against some reference
+
+- plotVCF.py
+
+Take in the output of summariseVCF.sh and plot a histogram of SNP frequencies. Filtering based on read depths
+
+# shell scripts
+- summariseVCF.sh
+
+Take in a VCF file and report the read depth and allele ratios. Plot frequencies using plotVCF.py using various filters.
+
+- breakIPRLoci.sh
+
+Take in the .loci output from [ipyrad](https://github.com/dereneaton/ipyrad) and convert this into a bunch of .fasta files.
