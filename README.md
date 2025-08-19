@@ -27,6 +27,6 @@ Take in the output of summariseVCF.sh and plot a histogram of SNP frequencies. F
 
 Take in a VCF file and report the read depth and allele ratios. Plot frequencies using plotVCF.py using various filters.
 
-- breakIPRLoci.sh
+- splitIPRLoci.sh
 
 Take in the .loci output from [ipyrad](https://github.com/dereneaton/ipyrad) and convert this into a bunch of .fasta files.
