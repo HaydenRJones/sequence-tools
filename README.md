@@ -22,6 +22,10 @@ Parse the output of flye and flyeLogParser.py, and attempt to pick a single cont
 
 Take in the output of summariseVCF.sh and plot a histogram of SNP frequencies. Filtering based on read depths
 
+- ete_multi_root.py
+
+An ete4 based script that re-roots all newick trees in a file onto a single taxa
+
 # shell scripts
 - summariseVCF.sh
 
