@@ -24,7 +24,7 @@ Take in the output of summariseVCF.sh and plot a histogram of SNP frequencies. F
 
 - ete_multi_root.py
 
-An ete4 based script that re-roots all newick trees in a file onto a single taxa
+An [ete4](https://github.com/etetoolkit/ete4) based script that re-roots all newick trees in a file onto a single taxa
 
 # shell scripts
 - summariseVCF.sh
