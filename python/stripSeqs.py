@@ -9,6 +9,9 @@ from Bio import SeqIO
 seq_file   = sys.argv[1]
 clust_file = sys.argv[2]
 
+file_path  = '/'.join(seq_file.split('/')[:-1])
+file_name  = '/'.join(seq_file.split('/')[-1])
+
 colnames = ['cluster', 'index', 'identity', 'score']
 clusters = pd.read_csv(clust_file, sep = '\t', header = None, names = colnames)
 clusters = clusters[clusters.groupby('cluster')['cluster'].transform('size') > 1]
@@ -38,10 +41,9 @@ for x in range(1, clusters['cluster'].nunique() + 1):
             clusterSeqs = pd.concat([clusterSeqs, seq], ignore_index = True , keys=['index', 'sequence'])
 
         else:
-            print(f'Index \'{target}\' not found in sequences DataFrame')
+            print(f'Index {target} not found in sequences DataFrame')
             
-        
-        f = open(f"{seq_file}_{x}", 'w')
+        f = open(f'{file_path}/split_{file_name}_{x}', 'w')
         
         for k in range(0, len(clusterSeqs)):
             
