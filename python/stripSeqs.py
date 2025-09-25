@@ -10,7 +10,7 @@ seq_file   = sys.argv[1]
 clust_file = sys.argv[2]
 
 file_path  = '/'.join(seq_file.split('/')[:-1])
-file_name  = '/'.join(seq_file.split('/')[-1])
+file_name  = ''.join(seq_file.split('/')[-1])
 
 colnames = ['cluster', 'index', 'identity', 'score']
 clusters = pd.read_csv(clust_file, sep = '\t', header = None, names = colnames)
