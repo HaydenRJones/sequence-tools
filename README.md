@@ -26,6 +26,10 @@ Take in the output of summariseVCF.sh and plot a histogram of SNP frequencies. F
 
 An [ete4](https://github.com/etetoolkit/ete4) based script that re-roots all newick trees in a file onto a single taxa
 
+- nQuiredet.py
+
+determine the best copy number from an [nQuire](https://github.com/clwgg/nQuire) stats output for several files
+
 # shell scripts
 - summariseVCF.sh
 
