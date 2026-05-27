@@ -20,13 +20,14 @@ file = open(infile, 'r')
 for line in file.readlines():
     
     # If we don't already know the loci name strip this out. Previously this was the file name however that is not always best practice
-    if not loci_name:
-        leaf_name = re.search(r'{}_[A-z0-9\-\.\_]*'.format(root_taxa), line)
-        loci_name = leaf_name.group()[len(root_taxa):]
+    leaf_name = re.search(r'{}_[A-z0-9\-\.\_]*'.format(root_taxa), line)
+    loci_name = leaf_name.group()[len(root_taxa):]
         
     t = Tree(line)
     
-    t.set_outgroup(f"{root_taxa}{loci_name}")
+    #t.to_ultrametric()
+    t.root_at(f"{root_taxa}{loci_name}")
+    t.resolve_polytomy(descendants=True)    
     
     new_trees += f'{t.write()}\n'
 
